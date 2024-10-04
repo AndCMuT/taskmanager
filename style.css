@@ -3,6 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root {
+    --mainColor: #8c30f5;
+}
+html {
+    font-family: "Open Sans", sans-serif;
+}
 header {
     padding: 5px 150px;
     height: 100px;
@@ -35,11 +41,18 @@ nav {
     width: 100%;
     list-style: none;
     display: flex;
-    flex-direction: row;
-        
+    flex-direction: row;  
 }
 .navigation li {
     margin-left: 45px;
+}
+.nav-links:active, .nav-links:visited, .nav-links {
+    text-decoration: none;
+    color: #000;
+}
+.nav-links:hover {
+    text-decoration: var(--mainColor) solid underline 2.5px;
+    transition: all ease-in-out .3s;
 }
 .download {
     width: 380px;
@@ -161,4 +174,10 @@ footer {
 }
 .social-icon svg {
     margin: 10px;
+    fill: white;
+}
+.social-icon svg:hover {
+    fill: var(--mainColor);
+    transition: all .3s;
+    transform: scale(2.2);
 }
